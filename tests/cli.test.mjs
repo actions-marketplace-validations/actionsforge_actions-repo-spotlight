@@ -3,10 +3,7 @@ import { describe, test, expect, vi, beforeEach, afterEach } from 'vitest';
 import * as core from '@actions/core';
 import * as github from '@actions/github';
 import { main } from '../lib/cli.js';
-import '../tests/setup.mjs';
 
-vi.mock('@actions/core');
-vi.mock('@actions/github');
 vi.mock('../src/spotlight.js', () => ({
   spotlightRepos: vi.fn().mockResolvedValue([])
 }));
